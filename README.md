@@ -8,6 +8,8 @@ The grid system from [bulma.css](http://bulma.io/) as a module.
 npm install --save grid.css
 ```
 
+CDN version: https://unpkg.com/grid.css/
+
 ## Usage
 
 ```js
