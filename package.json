@@ -6,7 +6,7 @@
     "type": "git"
   },
   "scripts": {
-    "play": "vue-play start --webpack-config ./play/webpack.config.js"
+    "test": "gulp build"
   },
   "files": [
     "src",
