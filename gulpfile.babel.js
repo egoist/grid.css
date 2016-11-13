@@ -17,7 +17,12 @@ gulp.task('compress', () => {
   gulp.src('./src/grid.sass')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
-    .pipe(postcss([require('cssnano')]))
+    .pipe(postcss([
+      require('autoprefixer')({
+        browsers: ['last 4 versions', 'ie > 8']
+      }),
+      require('cssnano')
+    ]))
     .pipe(rename({suffix: '.min'}))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./'))
